@@ -32,7 +32,7 @@ int main(char argc, char *argv[])
     while (fgets(line, sizeof(line), zrpal))
     {
         // check if there's a decimal value after colarray
-        if (sscanf(line, "colarray[%*d] = %d", &value) == 1)
+        if (sscanf(line, " colarray[%*d] = %d", &value) == 1)
         {
             // write the hex code to the output
             fprintf(output, "%X\n", value);
